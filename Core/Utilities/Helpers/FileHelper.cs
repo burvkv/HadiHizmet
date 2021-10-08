@@ -100,10 +100,10 @@ namespace Core.Utilities.Helpers
             List<string> ImagePaths = new List<string>();
            
                 var fileExists = CheckFileExist(file);
-                if (fileExists.Message != null)
-                {
-                    return new ErrorResult(fileExists.Message);
-                }
+            if (fileExists.Message != null)
+            {
+                return new ErrorResult(fileExists.Message);
+            }
                 var type = Path.GetExtension(file.FileName);
                 var typeValid = CheckFileTypeValid(type);
                 if (!typeValid.Success)
